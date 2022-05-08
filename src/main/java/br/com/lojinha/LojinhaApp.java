@@ -2,6 +2,8 @@ package br.com.lojinha;
 import br.com.lojinha.enums.Tamanho;
 import br.com.lojinha.pojo.ItemIncluso;
 import br.com.lojinha.pojo.Produto;
+import br.com.lojinha.pojo.ProdutoInternacional;
+import br.com.lojinha.pojo.ProdutoNacional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,5 +36,14 @@ public class LojinhaApp {
             System.out.println(itemAtual.getNome());
             System.out.println(itemAtual.getQuantidade());
         }
+
+        ProdutoNacional meuProdutoNacional = new ProdutoNacional("Sony", Tamanho.GRANDE);
+        meuProdutoNacional.setImposto(0.55789);
+        System.out.println(meuProdutoNacional.getImposto());
+
+        ProdutoInternacional meuProdutoInternacional = new ProdutoInternacional("JBL", Tamanho.PEQUENO);
+        meuProdutoInternacional.setValor(-99.99);
     }
 }
+
+
